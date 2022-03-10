@@ -43,7 +43,10 @@ function App() {
     })
       .then((response) => {
         setItems(items => [...items,response.data]);
-        setItem('');
+        setItem({
+          description:'',
+          amount:''
+        });
          
       }).catch (error => {
         alert(error.response.data.error)
